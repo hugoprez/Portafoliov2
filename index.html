@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ca6b9ed282.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <header class="header" id="inicio">
+        <nav class="header__menu">
+            <ul class="header__lista contenedor-flexible">
+                <li class="header__li"><a href="#inicio" class="enlaces enlaces__lista ancla">Inicio</a></li>
+                <li class="header__li"><a href="#sobre_mi" class="enlaces enlaces__lista ancla">Sobre mi</a></li>
+                <li class="header__li"><a href="#proyectos" class="enlaces enlaces__lista ancla">Proyectos</a></li>
+                <li class="header__li"><a href="#habilidades" class="enlaces enlaces__lista ancla">Habilidades</a></li>
+            </ul>
+        </nav>
+        <section class="header__informacion contenedor-flexible contenedor-flexible--centrado">
+            <div class="header__descripcion contenedor-flexible contenedor-flexible--centrado">
+                <h1 class="header__autor-nombre">Hola Soy<span class="header__apellido">Hugo Antillón </span></h1>
+                <h4 class="header__autor-experiencia animacionscrol">Desarrollador Frontend y Backend apasionado que trabaja para ofrecer soluciones innovadoras y mejorar la experiencia del usuario.</h4>
+            </div>
+            <div class="header__autor-contacto">
+                <div class="header__autor-imagen">
+                    <img src="img/hugo.jpg" alt="cargando imagen..." class="renderizar-imagen" loading="lazy">  
+                </div>
+                <div class="header__boton-descargar">
+                    <!-- <button class="header__boton-cv cursor">Descargar CV</button> -->
+                    <a href="https://drive.google.com/drive/folders/1jYcMXVeyjKxXSABfQCrEVecg2CQIoNd2?usp=drive_link" download="mi-cv.pdf" class="header__boton-cv">Descargar Currículum Vitae</a>
+                </div> 
+                <div class="header__redes-sociales contenedor-flexible contenedor-flexible--centrado">
+                    <a href="mailto:hugoantillonprez@gmail.com" class="header__enlaces-iconos enlaces"><i class="fa-solid fa-envelope" class="header__iconos"></i></a>
+                    <a href="https://github.com/antillonHugo" class="header__enlaces-iconos enlaces"><i class="fa-brands fa-github" class="header__iconos"></i></a>
+                    <a href="#" class="header__enlaces-iconos enlaces"><i class="fa-brands fa-bitbucket" class="header__iconos"></i></a>
+                </div>     
+            </div>
+        </section>
+        <img src="img/svg/wave-top.svg" alt="ola top" class="header__wave" >
+    </header>
+
+    <main class="main">
+
+        <!-- Elemento que servira para regresar a la sección inicial -->
+        <div class="boton-regreso">
+            <a href="#inicio" class="boton-regreso__scroll enlaces ancla">
+                <i class="fa-solid fa-chevron-up boton-regreso__i"></i>
+            </a>
+        </div>
+    
+        <!-- Sección para mostrar una descrpción -->
+        <section class="autor" id="sobre_mi">
+            <h2 class="autor__titulo"><span class="linea-decorativa"></span>Sobre mi <span class="linea-decorativa"></span> </h2>
+            <p class="autor__presentacion animacionscrol">
+                Soy de Santa Tecla,La Libertad actualmente me encuentro cursando la carrera Ingeniería en Sistema.
+            </p>
+            <p class="autor__presentacion animacionscrol">
+                Mi meta es convertirme en un experto en el desarrollo Front-End y Back-End, 
+                siempre busco seguir perfeccionando mis habilidades en el campo del desarrollo. 
+                soy una persona que no se cierra nuevas oportunidades con el fin de mejorar como profesional y aportar un alto valor a ti como empresa. 
+                me gusta aprender de las personas que poseen experiencia en el desarrollo y me apasiona de mostrar mi conocimiento.
+            </p>
+           <p class="autor__presentacion animacionscrol">
+               Llevo un tiempo preparandome de forma didáctica,
+                el siguiente paso que necesito es convivir y trabajar a diario con profesionales.
+           </p>
+        </section>
+        
+        <!-- Sección para mostrar los proyectos realizados -->
+        <section class="habilidades animacionscrol" id="proyectos">
+            <h2 class="tecnologias__categoria"><span class="linea-decorativa"></span>Proyectos<span class="linea-decorativa"></span></h2>
+            <div class="proyectos contenedor-flexible">
+                
+                <div class="proyectos__galeria">
+                    <a href="https://fanciful-queijadas-9f75f7.netlify.app/" class="enlaces enlaces--proyectos-galeria">
+                        <h3 class="proyectos__categoria">Carrito API</h3>
+                    </a>
+                    <img src="img/tienda.JPG" alt="cargando imegen..." class="renderizar-imagen enderizar-imagen--contain"  loading="lazy" >
+                </div>
+                <div class="proyectos__galeria">
+                    <a href="https://funny-gingersnap-f4eb06.netlify.app/" class="enlaces enlaces--proyectos-galeria">
+                        <h3 class="proyectos__categoria">Panadería en línea</h3>
+                    </a>
+                    <img src="img/panaderiaOnline.JPG" alt="cargando imegen..." class="renderizar-imagen enderizar-imagen--contain" loading="lazy" >
+                </div>
+                <div class="proyectos__galeria">
+                    <a href="http://sistemaescolar.somee.com/" class="enlaces enlaces--proyectos-galeria">
+                        <h3 class="proyectos__categoria">Sistema Escolar</h3>
+                    </a>
+                    <img src="img/sistema.png" alt="cargando imegen..." class="renderizar-imagen enderizar-imagen--contain"  loading="lazy" >
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Sección para mostrar los lenguajes,bases de datos y otras herramientas utilizadas -->
+        <section class="habilidades animacionscrol" id="habilidades">
+            <div class="habilidades__tecnologicas">
+                <h3 class="tecnologias__categoria">Bases de Datos</h3>
+                <div class="tecnologias contenedor-flexible animacionscrol">
+                    <div class="tecnologia">
+                        <img src="img/sql server.png" alt="PHP" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                    <div class="tecnologia">
+                        <img src="img/MySQL-Logo_.png" alt="Javascript" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="habilidades__tecnologicas">
+                <h3 class="tecnologias__categoria">Lenguajes de Programación</h3>
+                <div class="tecnologias contenedor-flexible animacionscrol">
+                    <div class="tecnologia">
+                        <img src="img/pebblely php.png" alt="PHP" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                    <div class="tecnologia">
+                        <img src="img/js.png" alt="Javascript" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                    <div class="tecnologia">
+                        <img src="img/pebblely.png" alt="C#" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="habilidades__tecnologicas">
+                <h3 class="tecnologias__categoria">Control de Versiones</h3>
+                <div class="tecnologias contenedor-flexible animacionscrol">
+                    <div class="tecnologia">
+                        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="PHP" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                    <div class="tecnologia">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAh1BMVEX///8YFhYAAAAQDQ0UEhJEQ0MKBgYTERHz8/P6+vpiYWFUU1O0tLQeHBwRDg4qKSmjoqLi4uLT09NJSEhpaGglIyPHxsaYl5eAgIA+PT14d3eJiIggHh7Nzc3d3d3U1NQxMDDr6+uura2Uk5NubW0wLi6EhIS7u7tjYmI4NzdOTU2WlpZaWVlxXGWoAAAIFElEQVR4nO2daZubvA6GB5lxICvZE5JZskynaef//75DdsAWEGLZ9D26P/VqU8wTW5Ys2c7LC8MwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMP8HxO6fgEaglF3vmiPD4PpureeDg7j9mLe/Qhcv5YZgtm8DSek6Lf8I62+kOe/+tnN/nGZb6vlUZrv6fGPQperN9evWZdZnLy/QMTdEcmn9jPXL/s474ukf7C+U/oyEbn4cP3KD9EdV5d3E/nadf3aVQkjUWFwqiT/K/onfEmi77HuS3ekjFy/fildWVvfRWOzx+po+ZS+s8blyLUMlDCuZX95BMQNNceZBAP6jgA00j8uoGVI4HGoxq7lKAwHpjrwDEyHriVl6RqxwDQCGjWprp6eQlV8WLmWdadtdoRegbZrYRfCVxqBicRxI9xG8EUlMJH42YAFcjCVZAI9T06dS6QVmEgcOJYYftEKTCR+urVFsknmDoxdCvxNLzCROHEncGVDYCJx50rgtx2BicRvNwKHSqjmn9K8zywxzk9Qn+smDB/kg21/OnubbRdfVbKkOvoAvThKnjHNSxSfLgQulDF6tZfNdgyPD2AJX/NLV6n27SIKn6ka4J7Ufd8/qFFC557c/9A823ryJpSKufnr9Ac2MWiCgVNlRv1rAe339H/uKZ9p9ezq041RT+b81rB9m3R8AXAtQMnrH8VVRgvGuZT+b/XLsT1ONePIAyWbO5vCub7U66yi2Wh4DTGD4WgWrTq9c10KPMUZRLrHv+c/RcqrZrYETZVsAetJNMKC52AUTdawUP/hTaNQdowqKKGrm0a0TmtT+izdJ4ba59tMMWrTMmBuERDqFLYGxp5fis5MEoUGW9A3YC37FgptZo1cob1O1HchvUJ7EXhLnxw1qFBrh0lgsDTXRBHYognK582qaOdST++QCND5QsPN6/zhkXzYRMM7FlKrMU1t5mgbNjJvv7DWDQYdHWyBafBbxMGLMMYMcYOuvMSroSYK0KwLbwpNhVVFbdDnM2K0dfhlrBHUDm0MU3SQSpMDaIJJpHeJ2Dzu+QbdYeLy11jGjnw23aHz+NxoO6gpkkduS2QeN55H6SAlH92C2SQB+tVuDbeky5Mc6RMbIjZ4fGG8qTEWHNIa4l8sJDafCdNmSjzy6LuNWYf5RFiA+CVij4i0SrL6RoJT2g1h2ERjMJy5gwQ2tFMNNsGROCksuDCZLVFAl/cU8TC2wjCYtVTBImKarxVrjDK9r6nHHPFpCkNTfWxKWmhDnAXRuhTx+aSRKdKm/CFp7Uf/fRoPENMc+nqFv0laQ0YMqcsf6C3Dch+aXadlUTZJnBE0pT0sqPlL0tqJUK2vnyAKM5Z6myBVqNtl4OX3KBhjjYTehKMU60PLHp/SDpFvlSaQQgpQTuZSmkAKLUA58Ic0mwiwjAlpTIMW1ihMAyk10+7JwJIYJEHN3l7G5A5WWSNxF6jRm0yu58Erl+aXwGiJzckan2IG3yJttWjCiwtYnsYTf4y3hcTdniQ974Um9c0bB14/oN2Gqd8N5RGcGMB8BXXxaYIdAvJN2z9eQKTdZ1pQfjbr9LGqhecL2nNQaAnY86XRmhDmDMk30uJTjdl6Albjol3/nviDHxYxGC9iywrPwrEE3BCTycbYOP1C1jAEM5oC6vMT5MFQIwVnw4kSl2n6BSfvwcwsgG9KsrITGildXNo3cby8SKCNzYmjwvNMMHg2egs7RQ3QBqUXkIrQBfFkFmXUK/4Gbez0RndFnfGhU3+tGJRcAeNLGwe7s76qJUHmpnYJcT1jCf+WHemj3hB1Ib1wg+lktT/kz7UC7B+/X264Kr/jzdJp2VSW77KzfDPPf/kSPnePrAGGUZU77Kwd7vq8Dctb0Slc5N+vDyDibRWVw+5iXe3osLWzXalszT3c/la74HQwexxHXfR0XjeKx9WPf9s6UPKS7kQPllfT+NCOsuPpUXz5P0mdJK3QhfaO5adTbuKWZkPWjoV5lU80xFax2IUvL4e01dymcO26QxSG48URUu6rsnmTa7a7brvadBuIS94LqxOoWAnY7mT30l8jNc2BoX7Jiqp6J1q+OWKTnVauravjtDQZjubU8g+yfatCNp15O2uhrHxKc38Vb4DpT6kVKSwzBnRbmMb5AK4sVC44AZR5jv0Lo7N3t9wPI2xT0Vfi8kuvQMJPcWUEUmzRLSNbG7pnF4LV9VoIaMUVEmNVFAqLB9VTZPJF/a/Uv3xEq1+r3Xe1yQ/N/d5xdQNPmLmCp7ahIDuf9APEMhlTFHUvHcN2P6QEujDCM5l5sG4ZuFQh0Ox8rEbGK9Yse5UplAenl+6l/XXN+aBEofAdX5y4T0ls1ZptihWKPuXekkrsM71Yo9ZdqFA48hMZ9hlbXD88sRcpFF4DBOai7Rb4i9QvqwzLc0cFCmXP+RA9k82Cn/JPr5M4nvzpAZQX3HCFsGzENcJHtvkklH+8s0wKv8pZE1Qh0JcKqzPS3T53MqTaCht1nXfCBrmMtrZC2bwfD1CS3k8phNeGzDFpZn1NN9ZTKEi349cnmKjZ+ToKfVjavUDwAWZKAbeGQrByy05tdrky28MKa5dXrbGZZBzHgwrlMyVya7y3U/34kEKAn3/kp8mOV+xeXEeF3MalaN4C2Dd2glEJdv55sFbYsHjcSZrEsoN5w+1PYXb6XUe/guNeJSHsorm/YlVA8B1VK9qGDYxfGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhmP8q/wOa7F1sPxWUkQAAAABJRU5ErkJggg==" alt="Javascript" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                    <div class="tecnologia">
+                        <img src="https://www.raycast.com/_next/image?url=https%3A%2F%2Ffiles.raycast.com%2F2tm8bhxsdoyylpnoyzbnx9bfgsde&w=128&q=75" alt="Javascript" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="habilidades__tecnologicas">
+                <h3 class="tecnologias__categoria">Otras Herramientas</h3>
+                <div class="tecnologias contenedor-flexible animacionscrol">
+                    <div class="tecnologia ">
+                        <img src="https://miro.medium.com/v2/resize:fit:596/1*UeR6loyEl-mQGSd838X1-w.png" alt="PHP" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                    <div class="tecnologia">
+                        <img src="https://createdevelopmentnote.com/wp-content/uploads/2022/09/sourcetree_log.png" alt="Javascript" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                    <div class="tecnologia">
+                        <img src="https://store-images.s-microsoft.com/image/apps.9729.14405452487353876.a6612b1c-3bfc-46da-ad7e-0dd83b65757d.be9b17fe-9781-42f6-9a3e-4914ef774843" alt="Javascript" class="renderizar-imagen renderizar-imagen--contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__ola">
+                <img src="img/svg/wave-bottom.svg" alt="cargando imagen..." class="ola__img" loading="lazy">
+            </div>
+            
+            <div class="footer_contenido">Hugo Antillón 2023</div>
+        </footer>
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

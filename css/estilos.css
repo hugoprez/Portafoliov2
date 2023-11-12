@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;700&display=swap");
+
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos generales para los contenedores flexibles */
+.contenedor-flexible{
+    display: flex;
+}
+
+.contenedor-flexible--centrado{
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos generales para imagenes */
+.renderizar-imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.renderizar-imagen--contain{
+    object-fit: contain;
+}
+
+/* Estilos generales para elementos con cursor pointer */
+.cursor{
+    cursor: pointer;
+}
+
+/* Estilos generales para elementos con cursor pointer */
+.enlaces{
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    color: black;
+}
+
+.enlaces--proyectos-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34,0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para los elementos que tendran animación de scroll */
+.animacionscrol{
+    opacity: 0;
+}
+
+/* Estilo para crear lineas en elementos*/
+.linea-decorativa{
+    display: inline-block;
+    width: 25%; /* Puedes ajustar el ancho de la línea según tus necesidades */
+    border-bottom: 2px solid black; /* Puedes cambiar el color y grosor de la línea aquí */
+}
+
+/* Estilos para elementos del header */
+.header__menu{
+    display: none;
+}
+
+.header__informacion{
+    background-color: #EBEBEB;
+    padding: 0 1rem; 
+    flex-direction: column;
+}
+
+.header__descripcion{
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.header__autor-nombre{
+    width: fit-content;
+    padding: 10px 0;
+
+    overflow: hidden; /* Para ocultar el texto que aún no ha sido animado */
+    white-space: nowrap; /* Para evitar que el texto se rompa en varias líneas */
+    border-right: 2px solid black; /* Efecto del cursor parpadeante */
+    animation: escribir 4s steps(40) infinite; /* Definición de la animación */
+}
+
+@keyframes escribir {
+    from {
+      width: 0; /* Comienza con un ancho de 0, es decir, sin texto visible */
+    }
+    to {
+      width: 75%; /* Llega al ancho completo del texto, mostrándolo completo */
+    }
+}
+
+.header__apellido {
+    color: #0F9E6E;
+    padding-left: .5rem;
+}
+
+.header__autor-contacto{
+    text-align: center;
+}
+
+.header__autor-imagen{
+    border-radius: 46% 54% 64% 36% / 49% 40% 60% 51% ;
+    overflow: hidden;
+}
+
+.header__boton-descargar{
+    padding: .5rem;
+}
+
+.header__boton-cv{
+    text-transform: uppercase;
+    background-color: rgba(12, 157, 110,0.7);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.header__boton-cv:hover{
+    outline: none;
+}
+
+.header__enlaces-iconos{
+    font-size: 1.8rem;
+    padding: 0 .3rem;
+}
+
+.enlaces__lista{
+    padding: .7rem 1rem;
+}
+
+.header__iconos{
+    font-size: clamp(3em, 3vw, 3.5em);
+}
+
+/* Estilos del contenido del portafolio */
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));  
+}
+
+.autor,.habilidades{
+    padding: 1rem;
+}
+
+.autor__titulo{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.habilidades:nth-of-type(3){
+   padding-bottom: 10rem;
+}
+
+/* Estilos para la sección de mi información */
+.autor__presentacion{
+    padding: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Estilos para la sección de proyectos */
+.proyectos{
+    flex-wrap: wrap;
+}
+
+.proyectos__galeria{
+    flex-basis: 150px;
+    flex-grow: 1;
+
+    margin: 12px 0;
+    overflow: hidden;
+    border: 1px solid #cccc;
+    border-radius: 7px;
+    min-height: 300px;
+    max-height: 300px;
+    position: relative;
+}
+
+.proyectos__galeria:hover .enlaces--proyectos-galeria{
+    background-color: rgba(34, 34, 34,0);
+    transition: .3s all ease;
+}
+
+.enlaces--proyectos-galeria:hover .proyectos__categoria{
+    visibility: hidden;
+}
+
+.proyectos__categoria{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-align: center;
+}
+
+/* Estilos para la sección de habilidades de lenguajes de programación,bases de datos etc... */
+.tecnologias{
+    justify-content: center;
+}
+
+.tecnologias__categoria{
+    padding: 1.5rem 0 1.1rem 0;
+    text-align: center;
+}
+
+.tecnologia{
+    padding: 3px;
+    border: 1px solid #cccc;
+    border-radius: 5px;
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 100px;
+
+    max-width: 100px;
+    margin: 5px 8px 5px 0;
+}
+
+
+
+/* Estilos para realizar animación mediante el scroll */
+.animacion-activa {
+  animation: reveal 5s forwards;
+}
+
+@keyframes reveal {
+    from {
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Estilos para el botón de regreso a la seccion de inicio o princiapl del sitio*/
+.boton-regreso{
+    border: 1px solid #cccc;
+    width: fit-content;
+    border-radius: 50%;
+    position:fixed;
+    right:15px;
+    top: 200px; 
+    background-color: rgba(12, 157, 110,0.7);
+    z-index: 5;
+    display: none;
+}
+
+.boton-regreso__scroll{
+    padding: 1.5rem;
+}
+
+.boton-regreso__i{
+    font-size: 1.3rem;
+    color: white;
+    pointer-events: none;
+}
+
+/* Estilos para la sección del footer */
+.footer{
+    grid-column: 1 / -1;
+    position: relative;
+}
+
+.footer__ola{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -65px;
+}
+
+.footer_contenido{
+    background-color: #EBEBEB;
+    padding: 5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Medias querys */
+@media screen and (min-width:320px){}
+
+@media screen and (min-width:480px){
+
+    /* Estilos para el botón de regreso a la seccion de inicio o princiapl del sitio*/
+    .boton-regreso{
+        top: 300px;
+        margin-right: 1rem;
+    }
+
+    /* Estilos del contenedor main */
+    .autor,.habilidades{
+        grid-column: 1 / -1;
+    }
+
+    /* Estilos para la sección de proyectos */
+    .proyectos__galeria{
+        flex-basis: 200px;
+        margin: 12px 12px 12px 0;
+    }
+
+   /* Estilos para la sección de habilidades de lenguajes de programación,bases de datos etc... */
+    .tecnologia{
+        max-height: 125px;
+        max-width: 125px;
+    }
+
+    /* Estilos para la sección del footer */
+    .footer__ola{
+        top: -106px;
+    }
+
+}
+
+/* Tablet */
+@media screen and (min-width:768px){
+   
+    /* Estilos para elementos del header */
+    .header{
+        position: relative;
+        z-index: 1;
+    }
+
+    .header__menu{
+        display: block;
+        background-color: #EBEBEB;
+    }
+
+    .header__lista{
+        /* border: 1px solid #cccc; */
+        list-style: none;
+        justify-content: flex-end;
+    }
+
+    .enlaces__lista{
+        transition: 3s all ease;
+    }
+
+    .enlaces__lista:hover{
+       color: white;
+       background-color: rgb(90, 88, 88);
+       transition: 5s all ease;
+    }
+
+    .header__li{
+        margin: 0 5px;
+    }
+
+    .header__informacion{
+        flex-direction: row-reverse;
+        padding: 2rem 2rem 0 2rem; 
+
+        position: relative;
+        z-index:3;
+    }
+
+    .header__descripcion{
+        width: 50%;
+        padding: 0;
+    }
+
+    .header__autor-contacto{
+        width: 40%;
+    }
+
+    .header__redes-sociales{
+        padding: 1rem 0;
+    }
+
+    .header__enlaces-iconos{
+        padding: 0 .8rem;
+        margin: 0 3px;
+    }
+
+    .header__wave{
+        z-index:2;
+        position: absolute;
+        bottom: -155px;
+    }
+
+    /* Estilos para el botón de regreso a la seccion de inicio o princiapl del sitio*/
+    .boton-regreso{
+        top: 500px;
+        margin-right: 2rem;
+    }
+
+    /* Estilos del contenedor main */
+    .autor{
+        padding: 9rem 3rem 1rem 3rem;
+    }
+
+    /* Estilos para la sección de proyectos */
+    .proyectos__galeria{
+        flex-basis: 250px;
+    }
+
+    .proyectos__categoria{
+        font-size: clamp(1.2rem, 5vw, 1rem);
+    }
+
+    /* Estilo para la secciones con clase "habilidades" */
+    .habilidades{
+        padding: 0 3rem 0 3rem;
+    }
+
+    /* Estilos para la sección de habilidades de lenguajes de programación,bases de datos etc... */
+    .tecnologia{
+        max-height: 150px;
+        max-width: 150px;
+    }
+
+    .tecnologias__categoria{
+        font-size: clamp(1.5rem, 1.5vw, 2rem);
+    }
+
+    /* Estilos para la sección del footer */
+    .footer__ola{
+        top: -165px;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width:960px){
+
+    /* Estilos para elementos del header */
+    .header__autor-contacto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header__wave{
+        bottom: -165px;
+    }
+
+    /* Estilos del contenido del portafolio */
+    .autor{
+        padding: 10rem 5rem 1rem 5rem;
+    }
+    
+    .habilidades{
+        padding: 1rem 5rem 1rem 5rem;
+    }
+
+    /* Estilos para la sección de habilidades de lenguajes de programación,bases de datos etc... */
+    .tecnologia{
+        margin: 5px 25px 5px 0;
+    }
+    
+    /* Estilos para la sección del footer */
+    .footer__ola{
+        top: -185px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width:1024px){
+
+   /* Estilos para elementos del header */
+    .header__autor-nombre{
+        font-size: 2.5rem;
+    }
+
+    .header__autor-experiencia{
+        font-size: 1.2rem;
+    }
+
+    .header__wave{
+        bottom: -220px;
+    }
+
+    /* Estilos del contenido del portafolio */
+    .autor{
+        padding: 15rem 8rem 1rem 8rem;
+    }
+        
+    .habilidades{
+        padding: 1rem 8rem 1rem 8rem;
+    }
+
+    .habilidades:nth-of-type(3){
+        padding-bottom: 15rem;
+    }
+
+    /* Estilos para la sección del footer */
+    .footer__ola{
+        top: -228px;
+    }
+
+}
+
+@media screen and (min-width:1328px){
+    /* Estilos para el botón de regreso a la seccion de inicio o princiapl del sitio*/
+  
+    /* Estilos para la sección del footer */
+    .footer__ola{
+        top: -245px;
+    }
+}
